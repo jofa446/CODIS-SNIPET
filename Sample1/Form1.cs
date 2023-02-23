@@ -15,7 +15,14 @@ namespace Sample1
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            // Items.
+            DomainUpDown.DomainUpDownItemCollection items = this.domainUpDown1.Items;
+            items.Add("Dot");
+            items.Add("Net");
+            items.Add("Perls");
 
+            // Set Text.
+            this.domainUpDown1.Text = "Dot";
         }
 
         private void InitializeTreeView()
@@ -29,7 +36,23 @@ namespace Sample1
             treeView1.EndUpdate();
         }
 
-        private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
+
+        private void domainUpDown1_SelectedItemChanged(object sender, EventArgs e)
+        {
+
+
+            // Set Text.
+            this.domainUpDown1.Text = "Dot";
+            // Run code every time the item is changed.
+            this.Text = domainUpDown1.Text;
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
         {
 
         }

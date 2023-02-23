@@ -41,6 +41,7 @@
             TreeNode treeNode11 = new TreeNode("Root3", new TreeNode[] { treeNode8, treeNode10 });
             button1 = new Button();
             treeView1 = new TreeView();
+            domainUpDown1 = new DomainUpDown();
             SuspendLayout();
             // 
             // button1
@@ -55,7 +56,7 @@
             // 
             // treeView1
             // 
-            treeView1.Location = new Point(374, 89);
+            treeView1.Location = new Point(12, 67);
             treeView1.Name = "treeView1";
             treeNode1.Name = "Node2";
             treeNode1.Text = "Node2";
@@ -82,15 +83,25 @@
             treeNode11.Name = "Root3";
             treeNode11.Text = "Root3";
             treeView1.Nodes.AddRange(new TreeNode[] { treeNode4, treeNode7, treeNode11 });
-            treeView1.Size = new Size(305, 252);
+            treeView1.Size = new Size(149, 93);
             treeView1.TabIndex = 1;
-            treeView1.AfterSelect += treeView1_AfterSelect;
+            // 
+            // domainUpDown1
+            // 
+            domainUpDown1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            domainUpDown1.Location = new Point(438, 154);
+            domainUpDown1.Name = "domainUpDown1";
+            domainUpDown1.Size = new Size(220, 23);
+            domainUpDown1.TabIndex = 4;
+            domainUpDown1.Text = "DOMAIN UP DOWN";
+            domainUpDown1.SelectedItemChanged += domainUpDown1_SelectedItemChanged;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(874, 508);
+            Controls.Add(domainUpDown1);
             Controls.Add(treeView1);
             Controls.Add(button1);
             Name = "Form1";
@@ -103,5 +114,6 @@
 
         private Button button1;
         private TreeView treeView1;
+        private DomainUpDown domainUpDown1;
     }
 }
